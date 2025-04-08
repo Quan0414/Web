@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+            *{margin: 0; padding: 0;}
+            nav ul{list-style-type: none; width: 150px; 
+                }
+            nav ul li a{text-decoration: none;display:inline-block;
+                background-color:yellow;width: 150px;}
+            nav ul li a:hover{background-color: red;}
+            .cha{position: relative;}
+            .con{position: absolute;display: none;left: 150px;top:0;}
+            .cha:hover .con{display: block;}
+
+    </style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="cha"><a href="#">support</a>
+                <ul class="con">
+                    <li><a href="#">produce</a></li>
+                    <li><a href="#">Hepl</a></li>
+                    <li><a href="#">about</a></li>
+                </ul>
+            
+            </li>
+            <li><a href="#">produce</a></li>
+            <li><a href="#">Hepl</a></li>
+            <li><a href="#">about</a></li>
+
+
+        </ul>
+    </nav>
+</body>
+</html>
