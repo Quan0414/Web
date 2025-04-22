@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        table{
+            margin: auto;
+            border-collapse: collapse;
+        }
+        table, td, th{
+            border: solid 1px black;
+            padding: 8px;
+        }
+
+    </style>
+</head>
+
+<script>
+    function tinhluong(){
+        var thang = parseFloat(document.getElementById("thang").value);
+        var heso = parseFloat(document.getElementById("heso").value);
+        var luongcb = parseFloat(document.getElementById("luongcb").value);
+        var luongthang = parseFloat(document.getElementById("luongthang").value);
+        var thue = parseFloat(document.getElementById("thue").value);
+        var thuclinh = thang * heso * luongcb - thue;
+        document.getElementById("thuclinh").value = thuclinh;
+    }
+    function xoa(){
+        document.getElementById("ten").value = "";
+        document.getElementById("thang").value = "";
+        document.getElementById("heso").value = "";
+        document.getElementById("luongcb").value = "";
+        document.getElementById("luongthang").value = "";
+        document.getElementById("thue").value = "";
+        document.getElementById("thuclinh").value = "";
+    }
+</script>
+
+<body>
+    <table>
+        <tr>
+            <th colspan="2" align="center">TÍNH LƯƠNG NHÂN VIÊN</th>
+          </tr>
+          
+        <tr>
+            <td>Ten nhan vien</td>
+            <td><input type="text" id="ten"></td>
+        </tr>
+        <tr>
+            <td>So thang lam viec</td>
+            <td><input type="number" id="thang"></td>
+        </tr>
+        <tr>
+            <td>He so luong</td>
+            <td><input type="number" id="heso"></td>
+        </tr>
+        <tr>
+            <td>Luong co ban</td>
+            <td><input type="number" id="luongcb"></td>
+        </tr>
+        <tr>
+            <td>Luong thang</td>
+            <td><input type="number" id="luongthang"></td>
+        </tr>
+        <tr>
+            <td>Thue thu nhap</td>
+            <td><input type="number" id="thue"></td>
+        </tr>
+        <tr>
+            <td>Thuc linh</td>
+            <td><input type="number" id="thuclinh" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+              <input type="button" value="Tính lương" onclick="tinhluong()">
+              <input type="button" value="Xóa" onclick="xoa()">
+            </td>
+        </tr>
+          
+    </table>
+</body>
+</html>
