@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Username</td>
+            <td>
+                <input type="text" id="user">
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input type="text" name="" id="pass">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="myF()">Kiem tra </button>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    // const rePass = /^(?=.*[A-Z])([a-zA-Z0-9!@#%&*_?]{7,})$/;
+//    const rePass =  /^(?=.*[A-Z])([a-zA-Z0-9!@#%&*_?]){7,}$/
+const rePass = /^(?=.*[A-Z])([a-zA-Z0-9!@#%&*_?]){7,}$/
+const myF = () => {
+  let username = document.getElementById("user").value;
+  let password = document.getElementById("pass").value;
+  if (username === "" || password === "") {
+    alert("Bạn nhập sai!");
+    return;
+  }
+  if (!rePass.test(password)) {
+    alert("Bạn nhập sai!");
+    return;
+  }
+  if (!isNaN(password[0])) {
+    alert("Bạn nhập sai!");
+    return;
+  }
+  alert("Bạn nhập đúng!");
+};
+</script>
+</html>

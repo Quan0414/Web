@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoLanXuatHien</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nhap chuoi</td>
+            <td>
+                <input type="text" name="" id="input1">
+            </td>
+        </tr>
+        <tr>
+            <td>Nhap tu</td>
+            <td>
+                <input type="text" id="input2">
+            </td>
+        </tr>
+        <tr>
+            <td>Thong bao</td>
+            <td>
+                <input type="text" id="output">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <Button onclick="Tim()">Tim</Button>
+                <button>Huy</button>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function Tim(){
+        let dem = 0;
+        let a = document.getElementById("input1").value.split(" ")
+        let b = document.getElementById("input2").value
+        for(var i=0;i<a.length;i++){
+            if(a[i] === b){
+                dem++;
+            }
+        }
+        document.getElementById("output").value = dem
+    }
+</script>
+</html>

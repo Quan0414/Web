@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SapMangChanLe</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="2" align="center">Sap xep mang</td>
+        </tr>
+        <tr>
+            <td>Nhap mang</td>
+            <td>
+                <input type="text" id="input">
+            </td>
+        </tr>
+        <tr>
+            <td>Sap mang</td>
+            <td>
+                <input type="text" id="output">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button>Huy</button>
+                <button onclick="SapXep()">Sap Xep</button>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function SapXep(){
+        let a = document.getElementById("input").value.split(',')
+        console.log(a.length);
+        let b = []
+        for(var i =0 ;i<a.length;i++){
+            if(a[i]==0){
+                b.push(a[i])
+                
+            }
+        }
+        for(var i=0;i<a.length;i++){
+            if(a[i] % 2 == 0 && a[i] !=0){
+                    b.unshift(a[i])
+                }
+                if(a[i] % 2 != 0 && a[i] != 0){
+                    b.push(a[i])
+                }
+        }
+        document.getElementById("output").value = b
+    }
+    
+</script>
+</html>

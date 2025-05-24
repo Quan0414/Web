@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimXauDaiNhat</title>
+</head>
+<style>
+    table{
+        background-color: aqua;
+    }
+</style>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="2" align="center">Tìm từ dài nhất</td>
+        </tr>
+        <tr>
+            <td>Nhập xâu</td>
+            <td>
+                <input type="text" id="input">
+            </td>
+        </tr>
+        <tr>
+            <td>Thông báo kết quả</td>
+            <td> <input type="text" id="output"></td>
+           
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <button>Xoa</button>
+                <button onclick="Tim()" >Tim kiem</button>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function Tim(){
+        var arr = document.getElementById("input").value.split(' ')
+        console.log(arr.length);
+        var a = document.getElementById("input").value
+        var max = 0;
+        var longest;
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i].length > max) {
+                var max  = arr[i].length;
+                longest = arr[i];
+            }
+        }
+        document.getElementById("output").value =  a.indexOf(longest);
+    }
+</script>
+</html>

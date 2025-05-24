@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoChuSoLe</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nhap so nguyen</td>
+            <td>
+                <input type="text" id="input">
+            </td>
+        </tr>
+        <tr>
+            <td>So chu so le</td>
+            <td>
+                <input type="text" id="output">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <Button onclick="Dem()">Dem</Button>
+                <button>Huy</button>
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function Dem(){
+        let a = document.getElementById("input").value.split("")
+    let b = []
+    for(var i=0;i<a.length;i++){
+        if(a[i] % 2 != 0){
+            b.push(a[i]);
+        }
+    }
+    document.getElementById("output").value = b
+    }
+   
+</script>
+</html>

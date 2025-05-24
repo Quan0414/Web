@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCNN</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nhap so thu 1</td>
+            <td><input type="text" id="so1"></td>
+        </tr>
+        <tr>
+            <td>Nhap so thu 2</td>
+            <td><input type="text" id="so2"></td>
+        </tr>
+        <tr>
+            <td>BCNN</td>
+            <td><input type="text" id="bcnn"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="Tim()">Tim</button>
+                <button>Huy</button>
+            </td>
+            
+        </tr>
+    </table>
+</body>
+<script>
+    function Tim(){
+        let a = parseInt(document.getElementById("so1").value)
+        let b = parseInt(document.getElementById("so2").value)
+        document.getElementById("bcnn").value = (a*b)/Check(a,b)
+    }
+    function Check(a,b){
+        // a = Math.abs(a);
+        // b = Math.abs(b);
+        // while(b){
+        //     var t = b;
+        //     b = a % b;
+        //     a = t;
+        // }
+        // return t;
+        if(!b){
+            return a 
+        }
+        return Check(b ,a % b)
+    }
+</script>
+</html>

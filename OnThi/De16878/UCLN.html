@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UCLN</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Nhap so thu 1</td>
+            <td><input type="text" id="so1"></td>
+        </tr>
+        <tr>
+            <td>Nhap so thu 2</td>
+            <td><input type="text" id="so2"></td>
+        </tr>
+        <tr>
+            <td>UCLN</td>
+            <td><input type="text" id="ucln"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="Tim()">Tim</button>
+                <button>Huy</button>
+            </td>
+            
+        </tr>
+    </table>
+</body>
+<script>
+    function Tim(){
+        let a = document.getElementById("so1").value
+        let b = document.getElementById("so2").value
+        document.getElementById("ucln").value = Check(a,b);
+    }
+    function Check(a,b){
+        if(!b){
+            return a
+        }
+        return Check(b, a % b)
+    }
+</script>
+</html>
