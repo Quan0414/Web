@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header div ul li {
+            margin: 0 20px;
+            padding: 10px 50px;
+
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .left ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .cha {
+            position: relative;
+
+
+        }
+
+        .con {
+            position: absolute;
+
+            top: 0%;
+            left: 100%;
+            width: 100px;
+            list-style: none;
+            display: none;
+            background-color: royalblue;
+
+        }
+
+        .cha:hover .con {
+            display: block;
+        }
+
+        .left ul li {
+            padding: 10px;
+
+        }
+
+        .content img {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+
+        .img div div img:hover {
+            transform: scale(1.1);
+            
+        }
+
+        .img div div p:hover{
+            color: red;
+        }
+
+        .img div div a:hover {
+            background-color: red;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header style="background-image: url(bground.png); height: 100px;">
+        <div style="display: flex;">
+            <img src="logo.png" alt="" style="height: 60px; width: 100px; margin-top: 20px; margin-left: 30px;">
+            <div style="text-align: center; color: white; margin: auto;">
+                <h1>SNFDSHFJDSOF OSHFOSHUOU SHFOSUDHFOUSDHFO</h1>
+                <p>SHFOSUDHFOUSDHFO SHFOSUDHFOUSDHFO SHFOSUDHFOUSDHFO</p>
+            </div>
+        </div>
+
+        <div style="background-color: aqua; height: 40px;">
+            <ul style="display: flex; list-style: none; ">
+                <li><a href="">Trang chu</a></li>
+                <li><a href="">San pham</a></li>
+                <li><a href="">Gioi thieu</a></li>
+                <li><a href="">TIn tuc</a></li>
+                <li><a href="">Lien he</a></li>
+                <li><input style="width: 300px;" type="text" placeholder="Nhao tu khoa tim kiem"></li>
+
+            </ul>
+        </div>
+    </header>
+
+    <div class="main" style="margin-top: 20px; display: flex;">
+        <div class="left" style="color: white; width: 250px;">
+            <h2 style="background-color: blue; padding: 5px;">Theo ung dung</h2>
+            <ul style="background-color: rgb(30, 154, 255);">
+                <li><a href="">ABC XYZ</a></li>
+                <li><a href="">ABC XYZ</a></li>
+                <li><a href="">ABC XYZ</a></li>
+                <li><a href="">ABC XYZ</a></li>
+                <li class="cha"><a href="">CAC NGANH KHAC</a>
+                    <ul class="con">
+                        <li><a href="">ABC XYZ</a></li>
+                        <li><a href="">ABC XYZ</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="content">
+            <div style="display: flex;">
+                <p>UD OHDFUH UHFOUHDSUIF</p>
+                <a style="padding-left: 1000px;" href="">Xem tat ca</a>
+            </div>
+            <div style="display: flex;">
+                <div style="width: 200px;">
+                    <img src="logo.png" alt="">
+                    <img src="logo.png" alt="">
+                    <img src="logo.png" alt="">
+                </div>
+
+                <div class="img">
+                    <div style="display: flex;">
+                        <div style="margin: 10px 50px;">
+                            <img src="abc.png" alt="">
+                            <p>snfosd ifosdfosdf</p>
+                            
+                                <a href="">Lien he</a>
+                            
+                            
+                        </div>
+                        <div style="margin: 10px 50px;">
+                            <img src="abc.png" alt="">
+                            <p>snfosd ifosdfosdf</p>
+                            
+                                <a href="">Lien he</a>
+                            
+                            
+                        </div>
+                        <div style="margin: 10px 50px;">
+                            <img src="abc.png" alt="">
+                            <p>snfosd ifosdfosdf</p>
+                            
+                                <a href="">Lien he</a>
+                            
+                            
+                        </div>
+                    </div>
+
+                    <div style="display: flex;">
+                        <div style="margin: 10px 50px;">
+                            <img src="abc.png" alt="">
+                            <p>snfosd ifosdfosdf</p>
+                            
+                                <a href="">Lien he</a>
+                            
+                            
+                        </div>
+                        <div style="margin: 10px 50px;">
+                            <img src="abc.png" alt="">
+                            <p>snfosd ifosdfosdf</p>
+                            
+                                <a href="">Lien he</a>
+                            
+                            
+                        </div>
+                        <div style="margin: 10px 50px;">
+                            <img src="abc.png" alt="">
+                            <p>snfosd ifosdfosdf</p>
+                            
+                                <a href="">Lien he</a>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
